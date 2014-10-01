@@ -1,13 +1,14 @@
 #!/usr/bin/env python
 
-from fabric.api import run, env
+from fabric.api import run, sudo, env
 import os
 
 # internal IP
-#env.hosts = ['172.16.100.169']
+#env.hosts = [os.environ['BUILDBUILD_IN_IP']]
 
 # external IP
-#env.hosts = ['61.43.139.143']
+env.hosts = [os.environ['BUILDBUILD_EX_IP']]
+env.user = 'buildbuild'
 
 def host_type():
     run('uname -s')
