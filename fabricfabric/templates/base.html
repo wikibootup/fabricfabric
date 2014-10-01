@@ -1,7 +1,16 @@
 <!DOCTYPE html>
 <head>
-    <title>{% block title %}{% endblock %}</title>
-    <body>{% block content %}{% endblock %}</body>
+  <title>{% block title %}{% endblock %}</title>
+  <body>
+    {% block content %}{% endblock %}
+    <form action="PageObjects" method="post">
+      <select name="connect" style="width:10%">
+        <option value="ex", selected="set ">External IP</opition>         
+        <option value="in", selected="set ">Internal IP</option>
+      </select>
+    <input type="submit" value="Select">
+    </form>
+  </body>
 </head>
 </html>
 
