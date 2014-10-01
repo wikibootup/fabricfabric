@@ -5,11 +5,12 @@ from django.contrib import admin
 admin.autodiscover()
 
 from fabricfabric.views import Home
+from server.views import Logout
 import server.views
 
 urlpatterns = patterns('',
-#    (r'^home/', TemplateView.as_view(template_name="home.html")),        
 #    url(r'^$', server.views.index, name='index'),
     url(r'^$', Home.as_view(), name='home'),
+    url(r'^logout/', Logout.as_view(), name="logout"),    
 )
 
