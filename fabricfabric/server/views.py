@@ -7,5 +7,3 @@ from django.conf.urls import patterns, url
 def index(request):
     return HttpResponse('This is fabric test')
 
-    
-
