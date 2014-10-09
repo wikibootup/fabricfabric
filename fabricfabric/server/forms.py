@@ -12,7 +12,7 @@ mapping_IP = (
 )
 
 class PublicIPForm(forms.Form):
-    selected_IP = forms.ChoiceField(
+    select_ip = forms.ChoiceField(
         required=True, 
         widget=forms.RadioSelect(),
         choices = mapping_IP,
