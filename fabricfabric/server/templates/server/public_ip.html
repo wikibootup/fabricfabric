@@ -10,35 +10,9 @@ public_ip.html
   <p>Configure your network</p>
     <form action="" method="POST">{% csrf_token %}
       {{ form.as_p }}
-      <input type="submit" value="Select" name = "selected_ip">
-<!--
-  {% if selected_ip %}
-    <form action="/public_ip/?selected_ip={{selected_ip}}" method="POST">{% csrf_token %}
-  {% else %}
-    <form method="POST">{% csrf_token %}
-      {{ form.as_p }}
-      <input type="submit" value="Select" name = "selected_ip">
--->
+      <input type="submit" value="Select">
     </form>
-  {% endif %}
-<!--
-    <label for="ex_ip">External IP</label>
-    <input type="radio" name="selected_ip" id="ex_ip" value="ex_ip"><br>
-    <label for="in_ip">Internal IP</label>
-    <input type="radio" name="selected_ip" id="in_ip" value="in_ip"><br><br>
--->
+    {% endblock %}
+</body>
 
-  <!--
-      <form action="/public_ip/?next" method="post">{% csrf_token %}
-          <p>
-            <label for="id_ip"></label>
-              <select name="PublicIP" style="width:10%" class="choice-field">
-                <option value="PublicIP", selected="set_ex">External IP</option>
-                <option value="PublicIP", selected="set_in">Internal IP</option>
-              </select>
-          </p>
-          <input type="submit" value="select" name = selected_IP>
-      </form>
-  -->
-  {% endblock %}
 
