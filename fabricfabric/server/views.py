@@ -27,8 +27,9 @@ class PublicIPView(FormView):
     form_class = PublicIPForm
 
     def form_valid(self, form):
-        selected_IP = self.request.POST["selected_ip"]
-        
-        msg = subprocess.check_output(["fab", "host_type"])
-        msg = msg.replace(external_IP, 'buildbuild external IP')
-        return HttpResponse(msg)
+        select_IP = self.request.POST["select_ip"]
+        print self.request.POST.keys()  
+
+#        msg = subprocess.check_output(["fab", "host_type"])
+#        msg = msg.replace(external_IP, 'buildbuild external IP')
+        return HttpResponse(select_IP)
