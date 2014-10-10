@@ -14,7 +14,7 @@ mapping_IP = (
 class PublicIPForm(forms.Form):
     select_ip = forms.ChoiceField(
         required=True, 
-        widget=forms.RadioSelect(),
+#        widget=forms.RadioSelect(),
         choices = mapping_IP,
         label=""
     )
